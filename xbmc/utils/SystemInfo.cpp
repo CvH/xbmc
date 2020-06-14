@@ -948,9 +948,7 @@ int CSysInfo::GetXbmcBitness(void)
 
 bool CSysInfo::HasInternet()
 {
-  if (m_info.internetState != CSysData::UNKNOWN)
-    return m_info.internetState == CSysData::CONNECTED;
-  return (m_info.internetState = CSysInfoJob::GetInternetState()) == CSysData::CONNECTED;
+  return m_info.internetState == CSysData::UNKNOWN;
 }
 
 std::string CSysInfo::GetHddSpaceInfo(int drive, bool shortText)
