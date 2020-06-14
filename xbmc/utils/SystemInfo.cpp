@@ -250,7 +250,6 @@ bool CSysInfoJob::DoWork()
 {
   m_info.systemUptime      = GetSystemUpTime(false);
   m_info.systemTotalUptime = GetSystemUpTime(true);
-  m_info.internetState     = GetInternetState();
   m_info.videoEncoder      = GetVideoEncoder();
   m_info.cpuFrequency =
       StringUtils::Format("%4.0f MHz", CServiceBroker::GetCPUInfo()->GetCPUFrequency());
